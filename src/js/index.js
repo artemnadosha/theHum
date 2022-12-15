@@ -187,7 +187,7 @@ const dataUsersInfo = [
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
         label: './src/img/review-people/people-2.jpg',
-        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     },
     {
         id: 2,
@@ -195,7 +195,7 @@ const dataUsersInfo = [
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
         label: './src/img/review-people/people-3.png',
-        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, expedita fugiat incidunt nemo officiis quia sapiente tempora ut?'
+        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     },
     {
         id: 3,
@@ -203,7 +203,7 @@ const dataUsersInfo = [
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
         label: './src/img/review-people/people-4.jpg',
-        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus!'
+        userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     }
 ];
 
@@ -347,9 +347,9 @@ window.addEventListener('load', (event) => {
             });
         };
 
-        countRow = 3;
+        countRow = 6;
         workContainerRender.style.gridTemplateRows = `repeat(3, 1fr)`;
-        wrapperButtonLoad.style.display = 'block';
+        wrapperButtonLoad.style.display = 'flex';
 
         if(workContainerRender.children.length - 1 <= 12) {
             wrapperButtonLoad.style.display = 'none';
