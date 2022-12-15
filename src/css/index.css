@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   background-image: url(../img/sections-background/header-bg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -443,12 +444,24 @@
   background-color: #E9EDEF;
 }
 
+.work-icons {
+  display: flex;
+  gap: 3px;
+}
+
 .icon-work {
-  width: 88px;
+  width: 44px;
   height: 44px;
-  background-image: url(../img/icon-work.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  border: 1px solid #18CFAB;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #18CFAB;
+}
+.icon-work:hover {
+  color: white;
+  background-color: #18CFAB;
 }
 
 .wrapper-text-hover {
@@ -475,6 +488,8 @@
 .wrapper-button-load {
   width: 169px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .modifier-flex {
@@ -495,6 +510,73 @@
   border-color: #18CFAB;
 }
 
+.loader {
+  width: 72px;
+  height: 72px;
+  display: none;
+}
+
+svg {
+  width: 100%;
+  fill: none;
+}
+
+.load {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 570;
+  stroke-width: 20px;
+}
+.load.one {
+  stroke: #18CFAB;
+  animation: load 1.5s infinite;
+}
+.load.two {
+  stroke: #8cffea;
+  animation: load 1.5s infinite;
+  animation-delay: 0.1s;
+}
+.load.three {
+  stroke: #d4fff3;
+  animation: load 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.point {
+  animation: bounce 1s infinite ease-in-out;
+}
+.point.one {
+  fill: #d4fff3;
+  animation-delay: 0s;
+}
+.point.two {
+  fill: #8cffea;
+  animation-delay: 0.1s;
+}
+.point.three {
+  fill: #18CFAB;
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 570;
+  }
+  50% {
+    stroke-dashoffset: 530;
+  }
+  100% {
+    stroke-dashoffset: 570;
+    transform: rotate(360deg);
+  }
+}
 .wrapper-breaking-news {
   width: 100%;
   display: flex;
@@ -603,6 +685,8 @@
   justify-content: center;
   text-align: center;
   gap: 38px;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-us-item {
@@ -610,6 +694,7 @@
   flex-direction: column;
   align-items: center;
   gap: 37px;
+  animation: opacityAnimation 2s running;
 }
 
 .about-text {
@@ -693,6 +778,14 @@
   transform: rotate(180deg);
 }
 
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .footer {
   width: 100%;
   background-color: #22353F;

@@ -29,6 +29,8 @@
   justify-content: center;
   text-align: center;
   gap: 38px;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-us-item {
@@ -36,6 +38,7 @@
   flex-direction: column;
   align-items: center;
   gap: 37px;
+  animation: opacityAnimation 2s running;
 }
 .about-text {
   font-weight: 300;
@@ -92,7 +95,6 @@
   border: 5px solid rgba(31, 218, 181, 0.2);;
   border-radius: 50%;
 
-
       &.active {
         margin-bottom: 30px;
       }
@@ -121,3 +123,11 @@
   transform: rotate(180deg);
 }
 
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+      }
+}
