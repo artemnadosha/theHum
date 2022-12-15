@@ -1,0 +1,123 @@
+.wrapper-about-us {
+  width: 100%;
+  background-image: url(../img/sections-background/section-about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 99px;
+  padding: 99px 0;
+  user-select: none;
+}
+
+.icon-about {
+  width: 44px;
+  height: 30px;
+  background-image: url(../img/icon-about.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us {
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 38px;
+}
+
+.about-us-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+}
+.about-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: #BBBBBB;
+}
+
+.wrapper-about-name {
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-user-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #18CFAB;
+}
+
+.about-user-info {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 13px;
+  color: #BBBBBB;
+}
+
+.about-user-img {
+  width: 170px;
+  height: 170px;
+  border: 10px solid rgba(31, 218, 181, 0.2);;
+  border-radius: 50%;
+}
+
+.wrapper-about-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-users-img {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(31, 218, 181, 0.2);;
+  border-radius: 50%;
+
+
+      &.active {
+        margin-bottom: 30px;
+      }
+}
+
+.button-arrow {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #BBBBBB;
+  color: #BBBBBB;
+
+
+      &:hover {
+        background-color: $main-color;
+        color: white;
+        border: 1px solid $main-color;
+      }
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
+

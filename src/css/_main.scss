@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.section-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #4E4E4E;
+  text-align: center;
+  position: relative;
+
+      &::after {
+        content: '';
+        width: 76px;
+        height: 1px;
+        background-color: $main-color;
+        box-shadow: 13px 3px 0px $main-color;
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+      }
+}
+
+.white-color {
+  color: white;
+}
+@import "./main/_section-option.scss";
+@import "./main/_section-services.scss";
+@import "./main/_section-purchase.scss";
+@import "./main/_section-work.scss";
+@import "./main/_section-news.scss";
+@import "./main/_section-about-us.scss";

@@ -1,0 +1,54 @@
+.wrapper-option {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(360px, 1fr);
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.option-one {
+  background-image: url(../img/icon-services/icon-1.svg);
+}
+
+.option-two {
+  background-image: url(../img/icon-services/icon-2.svg);
+}
+
+.option-three {
+  background-image: url(../img/icon-services/icon-3.svg);
+}
+
+.option-four {
+  background-image: url(../img/icon-services/icon-4.svg);
+}
+
+.modifier-option-bg-darkblue {
+  background-color: #1C2A33;
+  color: $main-color;
+}
+
+.modifier-option-bg-lightblue {
+  background-color: $main-color;
+  color: white;
+}
+
+.option-content-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
