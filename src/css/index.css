@@ -152,6 +152,10 @@
   color: white;
 }
 
+.bg-blue {
+  background-color: #00CBF6;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -164,6 +168,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+  margin-bottom: 40px;
   color: #4E4E4E;
   text-align: center;
   position: relative;
@@ -268,6 +273,7 @@
   line-height: 16px;
   text-align: center;
   border: 1px solid #DADADA;
+  background-color: #F8FCFE;
   padding: 30px 0;
   cursor: pointer;
   color: #717171;
@@ -494,7 +500,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 99px;
+  gap: 67px;
   padding: 82px 0;
 }
 
@@ -575,7 +581,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 99px;
+  gap: 67px;
   padding: 99px 0;
   user-select: none;
 }
