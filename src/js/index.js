@@ -174,6 +174,7 @@ const dataNews = [
 ];
 const dataUsersInfo = [
     {
+        id: 0,
         dataText: 'userOne',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
@@ -181,6 +182,7 @@ const dataUsersInfo = [
         userComment: 'Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.'
     },
     {
+        id: 1,
         dataText: 'userTwo',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
@@ -188,6 +190,7 @@ const dataUsersInfo = [
         userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
     },
     {
+        id: 2,
         dataText: 'userThree',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
@@ -195,6 +198,7 @@ const dataUsersInfo = [
         userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, expedita fugiat incidunt nemo officiis quia sapiente tempora ut?'
     },
     {
+        id: 3,
         dataText: 'userFour',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
@@ -208,21 +212,21 @@ const servicesContainerControl = document.querySelector('.services-list');
 const servicesContainerRender = document.querySelector('.services-content-list')
 const workContainerControl = document.querySelector('.work-nav-list');
 const workContainerRender = document.querySelector('.wrapper-work-item');
-const newsContainerRender = document.querySelector('.news-list');
-const aboutContainerControl = document.querySelector('.about-users');
-const aboutContainerRender = document.querySelector('.wrapper-about-us-item');
-const aboutUsersButton = document.querySelectorAll('.button-arrow');
 const wrapperButtonLoad = document.querySelector('.wrapper-button-load');
 const workLoad = document.querySelector('#work-load');
 const loadAnimation = document.querySelector('.loader');
+const newsContainerRender = document.querySelector('.news-list');
+const aboutContainerUsersControl = document.querySelector('.wrapper-about-users');
+const aboutContainerControl = document.querySelector('.about-users');
+const aboutContainerRender = document.querySelector('.wrapper-about-us-item');
 
 
-const generatedServicesItem = (isActive, dataText, label) =>
-    `<li class="services-item ${isActive && 'services-item-active'}" data-text="${dataText}">${label}</li>`;
+const generatedServicesItem = (isActive, obj) =>
+    `<li class="services-item ${isActive && 'services-item-active'}" data-text="${obj.dataText}">${obj.label}</li>`;
 const generatedServicesItemContent = (dataText, textContent, image) =>
-    `<li class="services-content-item" data-text="${dataText}"><img src="${image}" class="services-content-img"><div class="services-content-text">${textContent}</div></li>`
-const generatedWorkItem = (isActive, dataText, label) =>
-    `<li class="work-nav-item work-text ${isActive && 'work-nav-item-active'}" data-text="${dataText}">${label}</li>`;
+    `<li class="services-content-item" data-text="${dataText}"><img src="${image}" class="services-content-img"><div class="services-content-text">${textContent}</div></li>`;
+const generatedWorkItem = (isActive, obj) =>
+    `<li class="work-nav-item work-text ${isActive && 'work-nav-item-active'}" data-text="${obj.dataText}">${obj.label}</li>`;
 const generatedWorkItemContent = (image,dataText,label) =>
     `<div class="work-item">
         <img src='${image}' class="work-item" data-text="${dataText}">
@@ -244,7 +248,7 @@ const generatedWorkItemContent = (image,dataText,label) =>
                 <div class="work-sub-text-hover">${label}</div>
             </div>
         </div>
-    </div>`
+    </div>`;
 const generatedWorkItemAll = (images, obj) =>
     `<div class="work-item">
         <img src='${images}' class="work-item" data-text="${obj.dataText}" data-all="${obj.dataAll}">
@@ -266,7 +270,7 @@ const generatedWorkItemAll = (images, obj) =>
                 <div class="work-sub-text-hover">${obj.label}</div>
             </div>
         </div>
-    </div>`
+    </div>`;
 const generatedNewsItem = (obj) =>
     `<li class="news-item"><a href="#" class="news-link">
     <div class="news-date">${obj.postDate}<span class="news-month">${obj.month}</span></div>
@@ -274,8 +278,8 @@ const generatedNewsItem = (obj) =>
     <p class="news-title">${obj.postTitle}</p>
     <p class="news-title-info">By ${obj.userName}  |  ${obj.commentCount} comment</p>
     </a></li>`;
-const generatedAboutUsers = (isActive, dataText, image) =>
-    `<img src="${image}" alt="" class="about-users-img ${isActive && 'active'}" data-text="${dataText}">`;
+const generatedAboutUsers = (isActive, obj) =>
+    `<img src="${obj.label}" alt="" class="about-users-img ${isActive && 'active'}" data-text="${obj.dataText}" data-id="${obj.id}">`;
 const generatedAboutUsItem = (obj) =>
     `<div class="about-us-item" data-text="${obj.dataText}">
         <div class="icon-about"></div>
@@ -285,7 +289,7 @@ const generatedAboutUsItem = (obj) =>
         <p class="about-user-info">${obj.userWork}</p>
         </div>
         <img src="${obj.label}" alt="" class="about-user-img">
-     </div>`
+     </div>`;
 
 
 let countRow = 6;
@@ -298,7 +302,7 @@ window.addEventListener('load', (event) => {
         if(item.dataText === 'web-design'){
             const htmlContent = generatedServicesItemContent(item.dataText,item.textContent, item.images);
             servicesContainerRender.innerHTML = htmlContent;
-        }
+        };
     });
 
     const servicesItem = document.querySelectorAll('.services-item');
@@ -311,7 +315,7 @@ window.addEventListener('load', (event) => {
         servicesContainerRender.innerHTML += generatedServicesItemContent(event.target.dataset.text, itemServicesFilter.textContent, itemServicesFilter.images);
     }));
 
-//sections work
+
     dataWork.forEach(item => {
         renderTabs(item, workContainerControl, 'All', generatedWorkItem);
 
@@ -319,7 +323,7 @@ window.addEventListener('load', (event) => {
             item.images.forEach(el => {
                 workContainerRender.innerHTML += generatedWorkItemAll(el, item);
             });
-        }
+        };
     });
 
     const workNavItem = document.querySelectorAll('.work-nav-item');
@@ -335,39 +339,40 @@ window.addEventListener('load', (event) => {
                 if(item.images){
                     item.images.forEach(el => {
                         workContainerRender.innerHTML += generatedWorkItemAll(el, item);
-                    })}
-            })
+                    })};
+            });
         } else {
             itemWorkFilter.images.forEach(elem => {
                 workContainerRender.innerHTML += generatedWorkItemContent(elem, event.target.dataset.text, event.target.textContent);
             });
         };
+
         countRow = 3;
-        workContainerRender.style.gridTemplateRows = `repeat(3, 1fr)`
-        wrapperButtonLoad.style.display = 'block'
+        workContainerRender.style.gridTemplateRows = `repeat(3, 1fr)`;
+        wrapperButtonLoad.style.display = 'block';
 
         if(workContainerRender.children.length - 1 <= 12) {
-            wrapperButtonLoad.style.display = 'none'
-        }
+            wrapperButtonLoad.style.display = 'none';
+        };
     }));
 
     workLoad.addEventListener('click', () => {
-        workLoad.style.display = 'none'
-        loadAnimation.style.display = 'block'
+        workLoad.style.display = 'none';
+        loadAnimation.style.display = 'block';
         setTimeout(() => {
-            loadAnimation.style.display = 'none'
-            workLoad.style.display = 'flex'
-            workContainerRender.style.gridTemplateRows = `repeat(${countRow}, 1fr`
+            loadAnimation.style.display = 'none';
+            workLoad.style.display = 'flex';
+            workContainerRender.style.gridTemplateRows = `repeat(${countRow}, 1fr`;
             if(countRow * 4  <= workContainerRender.children.length - 1) {
-                countRow += 3
+                countRow += 3;
             } else {
-                wrapperButtonLoad.style.display = 'none'
-            }
-        },2000)
+                wrapperButtonLoad.style.display = 'none';
+            };
+        },2000);
     });
 
 
-    dataNews.forEach(e => newsContainerRender.innerHTML += generatedNewsItem(e))
+    dataNews.forEach(e => newsContainerRender.innerHTML += generatedNewsItem(e));
 
 
     dataUsersInfo.forEach(item => {
@@ -375,46 +380,54 @@ window.addEventListener('load', (event) => {
         if(item.dataText === 'userOne'){
             const htmlContent = generatedAboutUsItem(item);
             aboutContainerRender.innerHTML = htmlContent;
-        }
+        };
     });
 
     const aboutUsersItem = document.querySelectorAll('.about-users-img');
 
-    aboutUsersButton.forEach(el => el.addEventListener('click', event => {
-        aboutUsersItem.forEach(el => el.classList.remove('active'))
-        clearTabsContent(aboutContainerRender);
+    aboutContainerUsersControl.addEventListener('click', event => {
+        if(event.target.className !== 'about-users' && event.target.className !== 'wrapper-about-users'){
+            aboutUsersItem.forEach(el => el.classList.remove('active'));
+            clearTabsContent(aboutContainerRender);
+        };
 
-        if(event.currentTarget.dataset.name === 'right') {
-            countButton++
-            if (countButton > 3) {
-                countButton = 3;
+        if(event.target.dataset.button === 'button') {
+            if (event.target.dataset.name === 'right') {
+                countButton++;
+                if (countButton > 3) {
+                    countButton = 3;
+                };
+                aboutContainerRender.innerHTML = generatedAboutUsItem(dataUsersInfo[countButton]);
+                aboutContainerControl.children[countButton].classList.add('active');
+            } else {
+                countButton--;
+                if (countButton < 0) {
+                    countButton = 0;
+                };
+                aboutContainerRender.innerHTML = generatedAboutUsItem(dataUsersInfo[countButton]);
+                aboutContainerControl.children[countButton].classList.add('active');
             };
-            aboutContainerRender.innerHTML += generatedAboutUsItem(dataUsersInfo[countButton]);
-            aboutContainerControl.children[countButton].classList.add('active');
-        } else {
-            countButton--
-            if (countButton < 0) {
-                countButton = 0;
-            }
+        };
+
+        if (event.target.dataset.id) {
+            countButton = event.target.dataset.id;
             aboutContainerRender.innerHTML += generatedAboutUsItem(dataUsersInfo[countButton]);
             aboutContainerControl.children[countButton].classList.add('active');
         };
-    }));
+    });
 });
 
 
 const renderTabs = (item, containerControl, defaultDataText, funGenerated) => {
     const isActive = item.dataText === defaultDataText;
-    const html = funGenerated(isActive, item.dataText, item.label);
+    const html = funGenerated(isActive, item);
     containerControl.innerHTML += html;
-}
-
+};
 const clearsTabs = (items, classActive) => {
     items.forEach(item => item.classList.remove(classActive));
     event.target.classList.add(classActive);
-}
-
+};
 const clearTabsContent = (containerTabsItem) => {
     const ItemAll = containerTabsItem.querySelectorAll('*');
     ItemAll.forEach(e => e.remove());
-}
+};
