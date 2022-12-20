@@ -1,0 +1,39 @@
+.width-very-small {
+  width: 124px;
+  height: 86px;
+}
+
+.width-small {
+  width: 187.5px;
+  height: 168px;
+}
+
+.width-medium {
+  height: 247px;
+}
+
+.width-large {
+  height: 373px;
+}
+
+.gallery {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 378px;
+  margin-bottom: 13px;
+  overflow: hidden;
+
+}
+.grid-item img{
+  width: 100%;
+}
+
+.embedded-gallery {
+  width: 378px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}

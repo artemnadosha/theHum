@@ -222,11 +222,14 @@ const aboutContainerRender = document.querySelector('.wrapper-about-us-item');
 
 
 const generatedServicesItem = (isActive, obj) =>
-    `<li class="services-item ${isActive && 'services-item-active'}" data-text="${obj.dataText}">${obj.label}</li>`;
+    `<li class="services-item ${isActive && 'active'}" data-text="${obj.dataText}">${obj.label}</li>`;
 const generatedServicesItemContent = (dataText, textContent, image) =>
-    `<li class="services-content-item" data-text="${dataText}"><img src="${image}" class="services-content-img"><div class="services-content-text">${textContent}</div></li>`;
+    `<li class="services-content-item" data-text="${dataText}">
+        <img src="${image}" class="services-content-img">
+        <div class="services-content-text">${textContent}</div>
+    </li>`;
 const generatedWorkItem = (isActive, obj) =>
-    `<li class="work-nav-item work-text ${isActive && 'work-nav-item-active'}" data-text="${obj.dataText}">${obj.label}</li>`;
+    `<li class="work-nav-item work-text ${isActive && 'active'}" data-text="${obj.dataText}">${obj.label}</li>`;
 const generatedWorkItemContent = (image,dataText,label) =>
     `<div class="work-item">
         <img src='${image}' class="work-item" data-text="${dataText}">
@@ -308,7 +311,7 @@ window.addEventListener('load', (event) => {
     const servicesItem = document.querySelectorAll('.services-item');
 
     servicesItem.forEach(el => el.addEventListener('click', event => {
-        clearsTabs(servicesItem, 'services-item-active');
+        clearsTabs(servicesItem, 'active');
         clearTabsContent(servicesContainerRender);
 
         const itemServicesFilter = dateServices.filter(el => el.dataText === event.target.dataset.text)[0];
@@ -329,7 +332,7 @@ window.addEventListener('load', (event) => {
     const workNavItem = document.querySelectorAll('.work-nav-item');
 
     workNavItem.forEach(el => el.addEventListener('click', event => {
-        clearsTabs(workNavItem, 'work-nav-item-active');
+        clearsTabs(workNavItem, 'active');
         clearTabsContent(workContainerRender);
 
         const itemWorkFilter = dataWork.filter(el => el.dataText === event.target.dataset.text)[0];
