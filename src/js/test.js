@@ -102,10 +102,10 @@ const generatedGalleryItem = (obj) =>
     `<div class="gallery-item ${obj.classSize}"><img src="${obj.image}" alt=""></div>`;
 
 const generatedEmbeddedContainer = (obj) =>
-    `<div class="grid-item embedded-gallery" data-id="${obj.dataId}"></div>`;
+    `<div class="gallery-item embedded-gallery" data-id="${obj.dataId}"></div>`;
 
 const generatedGalleryEmbeddedItem = (obj) =>
-    `<div class="embedded-item${obj.classSize}"><img src="${obj.image}" alt=""></div>`;
+    `<div class="embedded-item ${obj.classSize}"><img src="${obj.image}" alt=""></div>`;
 
 dataGallery.forEach(el => {
     if(Array.isArray(el)) {
@@ -124,7 +124,7 @@ dataGallery.forEach(el => {
     }
 })
 
-const grid = document.querySelector('.grid');
+const grid = document.querySelector('.gallery');
 
 const renderMasonry = new Masonry(grid, {
         itemSelector: '.gallery-item',
