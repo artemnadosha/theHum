@@ -421,45 +421,45 @@ function scaleImage () {
         };
     }));
 };
+const renderGallery = (countGallery) => {
+
+    if(countGallery >= dataGallery.length - 1) {
+        countGallery = dataGallery.length - 1;
+        galleryLoad.style.display = 'none';
+    }
+
+    for (let i = 0; i <= countGallery; i++) {
+        if(Array.isArray(dataGallery[i])) {
+            const containerItems = generatedEmbeddedContainer(dataGallery[i][0]);
+            galleryContainerRender.innerHTML += containerItems;
+            const embeddedContainer = document.querySelector(`[data-gallery='${dataGallery[i][0].dataId}']`);
+            dataGallery[i].forEach(embEl => {
+                if(embEl.classSize) {
+                    const itemEmbeddedGallery = generatedGalleryEmbeddedItem(embEl);
+                    embeddedContainer.innerHTML += itemEmbeddedGallery;
+                };
+            });
+        } else {
+            const itemGallery = generatedGalleryItem(dataGallery[i]);
+            galleryContainerRender.innerHTML += itemGallery;
+        };
+    };
+
+    const containerMasonry = document.querySelector('.gallery');
+
+    const renderMasonry = new Masonry(containerMasonry, {
+        itemSelector: '.gallery-item',
+        columnWidth: 378,
+        gutter: 13,
+    });
+
+    scaleImage();
+};
+
 
 let countGallery = 7;
 
 window.addEventListener('load', () => {
-    const renderGallery = (countGallery) => {
-
-        if(countGallery >= dataGallery.length - 1) {
-            countGallery = dataGallery.length - 1;
-            galleryLoad.style.display = 'none';
-        }
-
-        for (let i = 0; i <= countGallery; i++) {
-            if(Array.isArray(dataGallery[i])) {
-                const containerItems = generatedEmbeddedContainer(dataGallery[i][0]);
-                galleryContainerRender.innerHTML += containerItems;
-                const embeddedContainer = document.querySelector(`[data-gallery='${dataGallery[i][0].dataId}']`);
-                dataGallery[i].forEach(embEl => {
-                    if(embEl.classSize) {
-                        const itemEmbeddedGallery = generatedGalleryEmbeddedItem(embEl);
-                        embeddedContainer.innerHTML += itemEmbeddedGallery;
-                    };
-                });
-            } else {
-                const itemGallery = generatedGalleryItem(dataGallery[i]);
-                galleryContainerRender.innerHTML += itemGallery;
-            };
-        };
-
-        const containerMasonry = document.querySelector('.gallery');
-
-        const renderMasonry = new Masonry(containerMasonry, {
-            itemSelector: '.gallery-item',
-            columnWidth: 378,
-            gutter: 13,
-        });
-
-        scaleImage();
-    };
-
     renderGallery(countGallery);
 
     galleryLoad.addEventListener('click', () => {
