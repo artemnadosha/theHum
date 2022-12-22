@@ -110,10 +110,10 @@ svg {
   }
 }
 
-@import "./main/_section-option.scss";
-@import "./main/_section-services.scss";
-@import "./main/_section-purchase.scss";
-@import "./main/_section-work.scss";
-@import "./main/_section-news.scss";
-@import "./main/_section-about-us.scss";
-@import "./main/_gallery-masonry";
+@import "main/section-option";
+@import "main/section-services";
+@import "main/section-purchase";
+@import "main/section-work";
+@import "main/section-news";
+@import "main/section-about-us";
+@import "main/gallery-masonry";

@@ -2,37 +2,37 @@ const dateServices = [
     {
         label: "Web Design",
         dataText: "web-design",
-        images: './src/img/graphic-design/graphic-design12.jpg',
+        images: './img/graphic-design/graphic-design12.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem! Magnam numquam quae repudiandae saepe sapiente! Aliquam blanditiis deserunt, dolore doloremque dolorum ducimus explicabo facilis hic inventore ipsa laboriosam modi molestias nulla officia omnis, possimus qui sapiente sunt tempore veniam. Asperiores assumenda, id iste labore laudantium libero modi molestiae neque nulla optio qui quidem, quos reiciendis repudiandae sequi totam ut. Accusantium adipisci assumenda explicabo facere fuga, quam qui quis velit voluptatem! Ab accusamus ad blanditiis, corporis delectus eos id, magnam natus nobis quam quibusdam quidem! Distinctio ipsam odit possimus quidem quis sequi velit veritatis?'
     },
     {
         label: "Graphic Design",
         dataText: "graphic-design",
-        images: './src/img/graphic-design/graphic-design11.jpg',
+        images: './img/graphic-design/graphic-design11.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem! Magnam numquam quae repudiandae saepe sapiente! Aliquam blanditiis deserunt, dolore doloremque dolorum ducimus explicabo facilis hic inventore ipsa laboriosam modi molestias nulla officia omnis, possimus qui sapiente sunt tempore veniam. Asperiores assumenda, id iste labore laudantium libero modi molestiae neque nulla optio qui quidem, quos reiciendis repudiandae sequi totam ut. Accusantium adipisci assumenda explicabo facere fuga, quam qui quis velit voluptatem! Ab accusamus ad blanditiis, corporis delectus eos id, magnam natus nobis quam quibusdam quidem! Distinctio ipsam odit possimus quidem quis sequi velit veritatis?'
     },
     {
         label: "Online Support",
         dataText: "online-support",
-        images: './src/img/graphic-design/graphic-design10.jpg',
+        images: './img/graphic-design/graphic-design10.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem! Magnam numquam quae repudiandae saepe sapiente! Aliquam blanditiis deserunt, dolore doloremque dolorum ducimus explicabo facilis hic inventore ipsa laboriosam modi molestias nulla officia omnis, possimus qui sapiente sunt tempore veniam. Asperiores assumenda, id iste labore laudantium libero modi molestiae neque nulla optio qui quidem, quos reiciendis repudiandae sequi totam ut. Accusantium adipisci assumenda explicabo facere fuga, quam qui quis velit voluptatem! Ab accusamus ad blanditiis, corporis delectus eos id, magnam natus nobis quam quibusdam quidem! Distinctio ipsam odit!'
     },
     {
         label: "App Design",
         dataText: "app-design",
-        images: './src/img/graphic-design/graphic-design7.jpg',
+        images: './img/graphic-design/graphic-design7.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem! Magnam numquam quae repudiandae saepe sapiente! Aliquam blanditiis deserunt, dolore doloremque dolorum ducimus explicabo facilis hic inventore ipsa laboriosam modi molestias nulla officia omnis, possimus qui sapiente sunt tempore veniam. Asperiores assumenda, id iste labore laudantium libero modi molestiae neque nulla optio qui quidem, quos reiciendis repudiandae sequi totam ut. Accusantium adipisci assumenda explicabo facere fuga, quam qui quis velit voluptatem! Ab accusamus ad blanditiis, corporis delectus eos id, magnam natus nobis quam quibusdam quidem! Distinctio!'
     },
     {
         label: "Online Marketing",
         dataText: "online-marketing",
-        images: './src/img/graphic-design/graphic-design5.jpg',
+        images: './img/graphic-design/graphic-design5.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem!'
     },
     {
         label: "Seo Service",
         dataText: "seo-service",
-        images: './src/img/graphic-design/graphic-design4.jpg',
+        images: './img/graphic-design/graphic-design4.jpg',
         textContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ipsa odit repellat tempora vero vitae, voluptatem! Magnam numquam quae repudiandae saepe sapiente! Aliquam blanditiis deserunt, dolore doloremque dolorum ducimus explicabo facilis hic inventore ipsa laboriosam modi molestias nulla officia omnis, possimus qui sapiente sunt tempore veniam. Asperiores assumenda, id iste labore laudantium libero modi molestiae neque nulla optio qui quidem, quos reiciendis repudiandae sequi totam ut. Accusantium adipisci assumenda explicabo facere fuga, quam qui quis velit voluptatem!'
     }
 ];
@@ -46,18 +46,18 @@ const dataWork = [
         dataText: "GraphicDesign",
         dataAll: 'All',
         images: [
-            './src/img/graphic-design/graphic-design1.jpg',
-            './src/img/graphic-design/graphic-design2.jpg',
-            './src/img/graphic-design/graphic-design3.jpg',
-            './src/img/graphic-design/graphic-design4.jpg',
-            './src/img/graphic-design/graphic-design5.jpg',
-            './src/img/graphic-design/graphic-design6.jpg',
-            './src/img/graphic-design/graphic-design7.jpg',
-            './src/img/graphic-design/graphic-design8.jpg',
-            './src/img/graphic-design/graphic-design9.jpg',
-            './src/img/graphic-design/graphic-design10.jpg',
-            './src/img/graphic-design/graphic-design11.jpg',
-            './src/img/graphic-design/graphic-design12.jpg',
+            './img/graphic-design/graphic-design1.jpg',
+            './img/graphic-design/graphic-design2.jpg',
+            './img/graphic-design/graphic-design3.jpg',
+            './img/graphic-design/graphic-design4.jpg',
+            './img/graphic-design/graphic-design5.jpg',
+            './img/graphic-design/graphic-design6.jpg',
+            './img/graphic-design/graphic-design7.jpg',
+            './img/graphic-design/graphic-design8.jpg',
+            './img/graphic-design/graphic-design9.jpg',
+            './img/graphic-design/graphic-design10.jpg',
+            './img/graphic-design/graphic-design11.jpg',
+            './img/graphic-design/graphic-design12.jpg',
         ]
     },
     {
@@ -65,13 +65,13 @@ const dataWork = [
         dataText: "WebDesign",
         dataAll: 'All',
         images: [
-            './src/img/web-design/web-design1.jpg',
-            './src/img/web-design/web-design2.jpg',
-            './src/img/web-design/web-design3.jpg',
-            './src/img/web-design/web-design4.jpg',
-            './src/img/web-design/web-design5.jpg',
-            './src/img/web-design/web-design6.jpg',
-            './src/img/web-design/web-design7.jpg',
+            './img/web-design/web-design1.jpg',
+            './img/web-design/web-design2.jpg',
+            './img/web-design/web-design3.jpg',
+            './img/web-design/web-design4.jpg',
+            './img/web-design/web-design5.jpg',
+            './img/web-design/web-design6.jpg',
+            './img/web-design/web-design7.jpg',
         ]
     },
     {
@@ -79,13 +79,13 @@ const dataWork = [
         dataText: "LandingPages",
         dataAll: 'All',
         images: [
-            './src/img/landing-page/landing-page1.jpg',
-            './src/img/landing-page/landing-page2.jpg',
-            './src/img/landing-page/landing-page3.jpg',
-            './src/img/landing-page/landing-page4.jpg',
-            './src/img/landing-page/landing-page5.jpg',
-            './src/img/landing-page/landing-page6.jpg',
-            './src/img/landing-page/landing-page7.jpg',
+            './img/landing-page/landing-page1.jpg',
+            './img/landing-page/landing-page2.jpg',
+            './img/landing-page/landing-page3.jpg',
+            './img/landing-page/landing-page4.jpg',
+            './img/landing-page/landing-page5.jpg',
+            './img/landing-page/landing-page6.jpg',
+            './img/landing-page/landing-page7.jpg',
         ]
     },
     {
@@ -93,23 +93,23 @@ const dataWork = [
         dataText: "Wordpress",
         dataAll: 'All',
         images: [
-            './src/img/wordpress/wordpress1.jpg',
-            './src/img/wordpress/wordpress2.jpg',
-            './src/img/wordpress/wordpress3.jpg',
-            './src/img/wordpress/wordpress4.jpg',
-            './src/img/wordpress/wordpress5.jpg',
-            './src/img/wordpress/wordpress6.jpg',
-            './src/img/wordpress/wordpress7.jpg',
-            './src/img/wordpress/wordpress8.jpg',
-            './src/img/wordpress/wordpress9.jpg',
-            './src/img/wordpress/wordpress10.jpg'
+            './img/wordpress/wordpress1.jpg',
+            './img/wordpress/wordpress2.jpg',
+            './img/wordpress/wordpress3.jpg',
+            './img/wordpress/wordpress4.jpg',
+            './img/wordpress/wordpress5.jpg',
+            './img/wordpress/wordpress6.jpg',
+            './img/wordpress/wordpress7.jpg',
+            './img/wordpress/wordpress8.jpg',
+            './img/wordpress/wordpress9.jpg',
+            './img/wordpress/wordpress10.jpg'
         ]
     },
 ];
 const dataNews = [
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-1.png',
+        images: './img/breaking-news/img-post-1.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '12',
@@ -117,7 +117,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-2.png',
+        images: './img/breaking-news/img-post-2.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '13',
@@ -125,7 +125,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-3.png',
+        images: './img/breaking-news/img-post-3.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '14',
@@ -133,7 +133,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-4.png',
+        images: './img/breaking-news/img-post-4.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '15',
@@ -141,7 +141,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-5.png',
+        images: './img/breaking-news/img-post-5.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '16',
@@ -149,7 +149,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-6.png',
+        images: './img/breaking-news/img-post-6.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '17',
@@ -157,7 +157,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-7.png',
+        images: './img/breaking-news/img-post-7.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '18',
@@ -165,7 +165,7 @@ const dataNews = [
     },
     {
         userName: 'admin',
-        images: './src/img/breaking-news/img-post-8.png',
+        images: './img/breaking-news/img-post-8.png',
         postTitle: 'Amazing Blog Post',
         commentCount: '2',
         postDate: '19',
@@ -178,7 +178,7 @@ const dataUsersInfo = [
         dataText: 'userOne',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
-        label: './src/img/review-people/people-1.jpg',
+        label: './img/review-people/people-1.jpg',
         userComment: 'Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis.'
     },
     {
@@ -186,7 +186,7 @@ const dataUsersInfo = [
         dataText: 'userTwo',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
-        label: './src/img/review-people/people-2.jpg',
+        label: './img/review-people/people-2.jpg',
         userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     },
     {
@@ -194,7 +194,7 @@ const dataUsersInfo = [
         dataText: 'userThree',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
-        label: './src/img/review-people/people-3.png',
+        label: './img/review-people/people-3.png',
         userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     },
     {
@@ -202,7 +202,7 @@ const dataUsersInfo = [
         dataText: 'userFour',
         userName: 'Hasan Ali',
         userWork: 'UX Designer',
-        label: './src/img/review-people/people-4.jpg',
+        label: './img/review-people/people-4.jpg',
         userComment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis distinctio dolorum eligendi error ex facilis molestias nihil nulla officiis omnis quis reiciendis, rerum sunt, ut. Error magni vero voluptatibus.'
     }
 ];
