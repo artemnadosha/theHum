@@ -64,7 +64,7 @@ const dataWork = [
         label: "Web Design",
         dataText: "WebDesign",
         dataAll: 'All',
-        images:[
+        images: [
             './src/img/web-design/web-design1.jpg',
             './src/img/web-design/web-design2.jpg',
             './src/img/web-design/web-design3.jpg',
@@ -78,7 +78,7 @@ const dataWork = [
         label: "Landing Pages",
         dataText: "LandingPages",
         dataAll: 'All',
-        images:[
+        images: [
             './src/img/landing-page/landing-page1.jpg',
             './src/img/landing-page/landing-page2.jpg',
             './src/img/landing-page/landing-page3.jpg',
@@ -213,7 +213,7 @@ const servicesContainerRender = document.querySelector('.services-content-list')
 const workContainerControl = document.querySelector('.work-nav-list');
 const workContainerRender = document.querySelector('.wrapper-work-item');
 const wrapperButtonLoad = document.querySelector('.wrapper-button-load');
-const workLoad = document.querySelector('#work-load');
+const workLoad = document.querySelector('#workLoad');
 const loadAnimation = document.querySelector('.loader');
 const newsContainerRender = document.querySelector('.news-list');
 const aboutContainerUsersControl = document.querySelector('.wrapper-about-users');
