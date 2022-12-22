@@ -275,12 +275,14 @@ const generatedWorkItemAll = (images, obj) =>
         </div>
     </div>`;
 const generatedNewsItem = (obj) =>
-    `<li class="news-item"><a href="#" class="news-link">
-    <div class="news-date">${obj.postDate}<span class="news-month">${obj.month}</span></div>
-    <img class="news-img" src="${obj.images}">
-    <p class="news-title">${obj.postTitle}</p>
-    <p class="news-title-info">By ${obj.userName}  |  ${obj.commentCount} comment</p>
-    </a></li>`;
+    `<li class="news-item">
+        <a href="#" class="news-link">
+            <div class="news-date">${obj.postDate}<span class="news-month">${obj.month}</span></div>
+            <img class="news-img" src="${obj.images}">
+            <p class="news-title">${obj.postTitle}</p>
+            <p class="news-title-info">By ${obj.userName}  |  ${obj.commentCount} comment</p>
+        </a>
+    </li>`;
 const generatedAboutUsers = (isActive, obj) =>
     `<img src="${obj.label}" alt="" class="about-users-img ${isActive && 'active'}" data-text="${obj.dataText}" data-id="${obj.id}">`;
 const generatedAboutUsItem = (obj) =>
@@ -288,8 +290,8 @@ const generatedAboutUsItem = (obj) =>
         <div class="icon-about"></div>
         <p class="about-text">${obj.userComment}</p>
         <div class="wrapper-about-name">
-        <p class="about-user-name">${obj.userName}</p>
-        <p class="about-user-info">${obj.userWork}</p>
+            <p class="about-user-name">${obj.userName}</p>
+            <p class="about-user-info">${obj.userWork}</p>
         </div>
         <img src="${obj.label}" alt="" class="about-user-img">
      </div>`;
@@ -303,8 +305,7 @@ window.addEventListener('load', (event) => {
     dateServices.forEach(item => {
         renderTabs(item, servicesContainerControl, 'web-design', generatedServicesItem);
         if(item.dataText === 'web-design'){
-            const htmlContent = generatedServicesItemContent(item.dataText,item.textContent, item.images);
-            servicesContainerRender.innerHTML = htmlContent;
+            servicesContainerRender.innerHTML = generatedServicesItemContent(item.dataText, item.textContent, item.images);
         };
     });
 
@@ -381,8 +382,7 @@ window.addEventListener('load', (event) => {
     dataUsersInfo.forEach(item => {
         renderTabs(item, aboutContainerControl, 'userOne', generatedAboutUsers);
         if(item.dataText === 'userOne'){
-            const htmlContent = generatedAboutUsItem(item);
-            aboutContainerRender.innerHTML = htmlContent;
+            aboutContainerRender.innerHTML = generatedAboutUsItem(item);
         };
     });
 

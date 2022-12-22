@@ -14,6 +14,43 @@
   align-items: center;
 }
 
+.modal-wrapper-image {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: OpacityImage 1s;
+}
+
+.modal-image {
+  min-height: 60%;
+  border: 1px solid white;
+}
+
+.icon-exit {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 92px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes OpacityImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
   width: 100%;
   display: flex;
@@ -840,10 +877,6 @@ svg {
   margin-bottom: 13px;
 }
 
-.grid-item img {
-  width: 100%;
-}
-
 .embedded-gallery {
   width: 378px;
   display: flex;
@@ -851,6 +884,31 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 3px;
+}
+
+.full-size-image {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: 1s;
+}
+.full-size-image:hover {
+  background-color: rgba(15, 1, 1, 0.6);
+}
+
+.icon-scale {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icon-scale.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.modal-hover:hover .full-size-image {
+  display: flex;
 }
 
 .footer {
