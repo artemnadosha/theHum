@@ -398,14 +398,14 @@ window.addEventListener('load', (event) => {
             if (event.target.dataset.name === 'right') {
                 countButton++;
                 if (countButton > 3) {
-                    countButton = 3;
+                    countButton = 0;
                 };
                 aboutContainerRender.innerHTML = generatedAboutUsItem(dataUsersInfo[countButton]);
                 aboutContainerControl.children[countButton].classList.add('active');
             } else {
                 countButton--;
                 if (countButton < 0) {
-                    countButton = 0;
+                    countButton = 3;
                 };
                 aboutContainerRender.innerHTML = generatedAboutUsItem(dataUsersInfo[countButton]);
                 aboutContainerControl.children[countButton].classList.add('active');
