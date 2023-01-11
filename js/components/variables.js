@@ -1,0 +1,14 @@
+export const servicesContainerControl = document.querySelector('.services-list');
+export const servicesContainerRender = document.querySelector('.services-content-list')
+export const workContainerControl = document.querySelector('.work-nav-list');
+export const workContainerRender = document.querySelector('.wrapper-work-item');
+export const wrapperButtonLoad = document.querySelector('.wrapper-button-load');
+export const workLoad = document.querySelector('#workLoad');
+export const loadAnimation = document.querySelector('.loader');
+export const newsContainerRender = document.querySelector('.news-list');
+export const aboutContainerUsersControl = document.querySelector('.wrapper-about-users');
+export const aboutContainerControl = document.querySelector('.about-users');
+export const aboutContainerRender = document.querySelector('.wrapper-about-us-item');
+export const galleryContainerRender = document.querySelector('.gallery');
+export const galleryLoad = document.querySelector('#galleryLoad');
+export const loadAnimationTwo = document.querySelector('.loader-two');
